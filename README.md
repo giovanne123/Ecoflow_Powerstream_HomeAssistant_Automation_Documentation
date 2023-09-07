@@ -123,7 +123,7 @@ and when it is working fine I will try to set AC Output Watts (Powerstream) depe
 
 ![image](https://github.com/bogdancs92/ecoflow-powerstream-nodejs/assets/16689453/ad6b813c-3210-4755-89ac-4c528aff4685)
 
-**Work in Progress: HA Automations for trying to narrow zero to grid by controlling the Powerstream via the ecoflow-powerstream-nodejs from HA**
+### **Work in Progress: HA Automations for trying to narrow zero to grid by controlling the Powerstream via the ecoflow-powerstream-nodejs from HA**
 - created some Automations, WebServices, ... for controlling the Powerstream 
   - One Automation for trying to narrow the supply to grid near zero (currently called every 10 seconds)
   - working for first tests, optimization for some tactful devices like heating phase of oven maybe needed, ...
@@ -135,7 +135,12 @@ Now need to monitor if it is working fine and Automations are triggered, optimiz
 ![image](https://github.com/bogdancs92/ecoflow-powerstream-nodejs/assets/16689453/d79c0a3d-cf03-42fd-8998-9ba51c6df1bd)
 (docker logs timestamp is because of timezone/setting 2h behind)
  
-**Automation triggered when Delta 2 Max gets full** (currently 100% defined in Automation), inactivated zero automation (until next morning), switched to Storage mode to supply all solar to AC Output and in preparation set AC output to 150W for the night (Automation will be triggered at 20:00):
+### **Automation triggered when Delta 2 Max gets full** 
+(currently 100% defined in Automation), inactivated zero automation (until next morning), switched to Storage mode to supply all solar to AC Output and in preparation set AC output to 150W for the night (Automation will be triggered at 20:00):
 (potential overload solar for switching other devices on or maybe additional little battery, ... - but this overload will end at our location in a few days ...)
 ![image](https://github.com/bogdancs92/ecoflow-powerstream-nodejs/assets/16689453/1b7f2109-241b-42e6-a606-d6e491d9b98b)
 (docker logs timestamp is because of timezone/setting 2h behind)
+
+### **Todays (07092023 1300) current state, Powerstream - Zero Automation was activated by Automation at 9:00 and supporting requests from ... ** 
+Dishwascher, Washing Maschine, MicroWave with the maximum of 600W, also supporting different lower devices ...:
+![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/bf795bcc-88d0-4173-9df8-03807c39271a)
