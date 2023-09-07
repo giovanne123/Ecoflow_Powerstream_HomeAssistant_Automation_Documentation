@@ -137,8 +137,7 @@ powerstream_command_set_prio_mode:
 * For Testing added the input_number/-text and buttons on HA card/view:
 ![image](https://github.com/bogdancs92/ecoflow-powerstream-nodejs/assets/16689453/ffdac92c-dc5b-4f97-b7b9-a28f9f247ec1) By pressing the buttons I can now change the AC Output Watts to 0, 75, 150 or the Power Supply Mode to Storage or AC Output/Grid. Also because the AC Output Watt (input_number) is defined as slider I can select the entity and change the output in between 0-600W (defined for input_number).
 
-* First tests are working and I will go on testing and when it is working fine I will try to set AC Output Watts (Powerstream) depending on my live Smartmeter Current Power (Grid) value (or to what else is helping me in my home and local environment):
-![image](https://github.com/bogdancs92/ecoflow-powerstream-nodejs/assets/16689453/ad6b813c-3210-4755-89ac-4c528aff4685)
+* First tests are working and I will go on testing and when it is working fine I will try to set AC Output Watts (Powerstream) depending on my live Smartmeter Current Power (Grid) value (or to what else is helping me in my home and local environment): ![image](https://github.com/bogdancs92/ecoflow-powerstream-nodejs/assets/16689453/ad6b813c-3210-4755-89ac-4c528aff4685)
 
 
 ### **Work in Progress: HA Automations for trying to narrow zero to grid by controlling the Powerstream via the ecoflow-powerstream-nodejs from HA**
