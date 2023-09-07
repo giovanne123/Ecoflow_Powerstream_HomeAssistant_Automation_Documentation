@@ -71,10 +71,13 @@ docker run -d -p 8888:8000 --restart unless-stopped --name=ecoflow-nodejs ecoflo
 * Test by calling URL:
     
 ```
-http://192.168.0.xxx:8888/cmd?my_token=my_secret_for_token&ac_output_watt=150&power_supply_mode=0)
+http://192.168.0.xxx:8888/cmd?my_token=my_secret_for_token&ac_output_watt=150&power_supply_mode=0
+http://192.168.0.xxx:8888/cmd?my_token=my_secret_for_token&power_supply_mode=0
+http://192.168.0.xxx:8888/cmd?my_token=my_secret_for_token&ac_output_watt=150
 ```
-(for 150W AC Output and Power Supply Mode to AC Output)
-        -	(Optional) Check the output from inside the container:
+(for 150W AC Output and Power Supply Mode to AC Output in one call or also individual call for only one option is possible)
+
+* (Optional) Check the output from inside the container:
 
 Docker Logs: 
 
