@@ -150,3 +150,17 @@ Now need to monitor if it is working fine and Automations are triggered, optimiz
 ### **Todays (07092023 1300) current state, Powerstream - Zero Automation was activated by Automation at 9:00 and supporting requests from ... ** 
 Dishwascher, Washing Maschine, MicroWave with the maximum of 600W, also supporting different lower devices ...:
 ![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/bf795bcc-88d0-4173-9df8-03807c39271a)
+
+### **Todays (07092023 1700) current state, Powerstream - Zero Automation was activated by Automation at 9:00 and deactivated at 16:30 (instead of Automation for full Delta2Max like yesterday)  ... **
+deactivated at 16:30 because of solar input reduces now for the Powerstream panels and to prevent Delta2Max from unload before nightly supply, now in storage mode until 20:00 (will be optimized maybe with additional panels attached directly to D2M too...) 
+![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/709c7511-cf57-43fe-a4d8-799093e92e02)
+
+
+Comparison from yesterday (oven was running with requests to 600W) and today (2 x washing maschine, dishwasher were running and supported by 600W), today more devices with requests to more than 600W were running, weather was identical full sun (no clouds)
+
+Yesterday: more supply to GRID (selfconsumed 89%) ![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/68c53149-a00d-4046-89cb-2cb3be7b93b0) ![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/c69abb8c-013d-49ca-9f8e-7278616eaca0)
+
+
+
+Today: supply to GRID was minizized (selfconsumed >98%, at 17:00) ![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/9515996c-16b8-4918-aa2f-2dfbd3cfa2a7)  ![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/90f85092-4270-4c25-9bc0-6a7fbd6c66a4)
+
