@@ -22,9 +22,9 @@ My plan now was to use this nodejs solution in a docker container beside my alre
 ### For my first PoC I started with:
 
 ### **ecoflow-powerstream-nodejs**
--	Cloned the repo from here (https://github.com/bogdancs92/ecoflow-powerstream-nodejs.git)
--	Nodejs Powerstream Config change: (values for e.g. URL, QUERY, TOKEN are free to use but must correspond to the REST-URL which will be called later) 
-o	Create/edit “.env”
+* Cloned the repo from here (https://github.com/bogdancs92/ecoflow-powerstream-nodejs.git)
+* Nodejs Powerstream Config change: (values for e.g. URL, QUERY, TOKEN are free to use but must correspond to the REST-URL which will be called later) 
+    * Create/edit “.env”
 ```
 NODE_ENV=development
 KEY_MAIL=your_email_ecoflow_app
@@ -36,11 +36,11 @@ KEY_QUERY_PRIO=power_supply_mode
 TOKEN=my_token
 TOKEN_VAL=my_secret_for_token
 ```
--	(optional) Nodejs Powerstream Container with nodejs-server waiting for request to change AC output Watts or Power Supply Mode on Powerstream
-o	_Without container: “node server.js”_ can be used also without a container when nodejs is installed in OS, container usage is currently my preferred way
-o	Docker already running for my HA
-o	Create Container (may vary on the personal needs)
-        Dockerfile:
+* (optional) Nodejs Powerstream Container with nodejs-server waiting for request to change AC output Watts or Power Supply Mode on Powerstream
+*  _Without container: “node server.js”_ can be used also without a container when nodejs is installed in OS, container usage is currently my preferred way
+* Docker already running for my HA
+* Create Container (may vary on the personal needs)
+  * Dockerfile:
 
 ```
 FROM node:latest
@@ -54,20 +54,33 @@ RUN apt-get install -y vim
 COPY . .
 CMD ["node", "server.js"]
 ```
-        Build:
+
+* Build:
       
-
-     `docker build --tag ecoflow-nodejs .`
-
-o	Start Container
-`docker run -d -p 8888:8000 --restart unless-stopped --name=ecoflow-nodejs ecoflow-nodejs`
-(Port 8888 for me because 8000 is already used elsewhere on my used Pi)
-o	Test by calling URL:
-`http://192.168.0.xxx:8888/cmd?my_token=my_secret_for_token&ac_output_watt=150&power_supply_mode=0)`
-(for 150W AC Output and Power Supply Mode to AC Output)
-o	(Optional) Check the output from inside the container:
-`docker logs --follow <containerID>`
 ```
+docker build --tag ecoflow-nodejs .
+```
+
+* Start Container:
+    
+```
+docker run -d -p 8888:8000 --restart unless-stopped --name=ecoflow-nodejs ecoflow-nodejs
+```
+(Port 8888 for me because 8000 is already used elsewhere on my used Pi)
+
+* Test by calling URL:
+    
+```
+http://192.168.0.xxx:8888/cmd?my_token=my_secret_for_token&ac_output_watt=150&power_supply_mode=0)
+```
+(for 150W AC Output and Power Supply Mode to AC Output)
+        -	(Optional) Check the output from inside the container:
+
+Docker Logs: 
+
+```
+docker logs --follow <containerID>
+
 30/08/2023 08:09:10:  set Ac => 150 Watts
 30/08/2023 08:09:10:  setPrio => 0
 30/08/2023 10:47:08:  set Ac => 75 Watts
@@ -75,28 +88,26 @@ o	(Optional) Check the output from inside the container:
 30/08/2023 10:47:44:  set Ac => 150 Watts
 30/08/2023 10:47:44:  setPrio => 0
 ```
+
 (docker logs timestamp is because of timezone/setting 2h behind)
 
 ### **Home Assistant**
--	Home Assistant with an Webservice call to the URL of the Nodejs-Powerstream-server, therefore I created some (similiar to example on Bogdans readme):
-o	input_numer (for AC Output Watts), input_text (for Mode) by HA Helpers functionalities
-o	Webservice (powerstream_command) in configuration (in my case rest_commands.yaml)
-o	Automation for state change of the input_numer (AC OutPut Watts) and input_text (Power Supply Mode) and calling Webservice (powerstream_command) 
-o	For testing some buttons to change the input_numer (AC OutPut Watts) or input_text (Power Supply Mode)  
-o	TODO: some intelligence/automation to change values / call Webservice in regards to my Smartmeter Live value in HA
+* Home Assistant with an Webservice call to the URL of the Nodejs-Powerstream-server, therefore I created some (similiar to example on Bogdans readme):
+    * input_numer (for AC Output Watts), input_text (for Mode) by HA Helpers functionalities
+    * Webservice (powerstream_command) in configuration (in my case rest_commands.yaml)
+    * Automation for state change of the input_numer (AC OutPut Watts) and input_text (Power Supply Mode) and calling Webservice (powerstream_command) 
+    * For testing some buttons to change the input_numer (AC OutPut Watts) or input_text (Power Supply Mode)  
+    * TODO: some intelligence/automation to change values / call Webservice in regards to my Smartmeter Live value in HA
 
-- input_number/-text and some buttons created by Helpers in HA:
-![image](https://github.com/bogdancs92/ecoflow-powerstream-nodejs/assets/16689453/374f623c-aef5-4e14-862f-126fd5c7349a)
-                    
-e.g. powerstream_ac_output:
-![image](https://github.com/bogdancs92/ecoflow-powerstream-nodejs/assets/16689453/02e66cad-b02c-44f3-aa25-fffe08e3e1de)
-
-![image](https://github.com/bogdancs92/ecoflow-powerstream-nodejs/assets/16689453/d959bf24-d156-4869-ba43-49a8feb0caa9)
+* input_number/-text and some buttons created by Helpers in HA:
+![image](https://github.com/bogdancs92/ecoflow-powerstream-nodejs/assets/16689453/374f623c-aef5-4e14-862f-126fd5c7349a)      
+    * e.g. powerstream_ac_output:
+![image](https://github.com/bogdancs92/ecoflow-powerstream-nodejs/assets/16689453/02e66cad-b02c-44f3-aa25-fffe08e3e1de) ![image](https://github.com/bogdancs92/ecoflow-powerstream-nodejs/assets/16689453/d959bf24-d156-4869-ba43-49a8feb0caa9)
  
 
  
 
-- Webservice (powerstream_command):
+* Webservice (powerstream_command):
 Rest_command.yaml (included in configuration.yaml):
 ```
 powerstream_command: 
@@ -104,31 +115,25 @@ powerstream_command:
     verify_ssl: false
 ```
 
-- Automations:
+* Automations:
 ![image](https://github.com/bogdancs92/ecoflow-powerstream-nodejs/assets/16689453/8e9d2ec1-393c-4016-8c14-feb5cffde902)
                 
-e.g. AC Output Watts
+    * e.g. AC Output Watts
 ![image](https://github.com/bogdancs92/ecoflow-powerstream-nodejs/assets/16689453/2c09ced1-4b75-4243-ba2d-dd49ef854e7f)
                 
                               
-- For Testing added the input_number/-text and buttons on HA card/view:
-![image](https://github.com/bogdancs92/ecoflow-powerstream-nodejs/assets/16689453/ffdac92c-dc5b-4f97-b7b9-a28f9f247ec1)
- 
+* For Testing added the input_number/-text and buttons on HA card/view:
+![image](https://github.com/bogdancs92/ecoflow-powerstream-nodejs/assets/16689453/ffdac92c-dc5b-4f97-b7b9-a28f9f247ec1) By pressing the buttons I can now change the AC Output Watts to 0, 75, 150 or the Power Supply Mode to Storage or AC Output/Grid. Also because the AC Output Watt (input_number) is defined as slider I can select the entity and change the output in between 0-600W (defined for input_number).
 
-By pressing the buttons I can now change the AC Output Watts to 0, 75, 150 or the Power Supply Mode to Storage or AC Output/Grid.
-Also because the AC Output Watt (input_number) is defined as slider I can select the entity and change the output in between 0-600W (defined for input_number).
+* First tests are working and I will go on testing and when it is working fine I will try to set AC Output Watts (Powerstream) depending on my live Smartmeter Current Power (Grid) value (or to what else is helping me in my home and local environment): ![image](https://github.com/bogdancs92/ecoflow-powerstream-nodejs/assets/16689453/ad6b813c-3210-4755-89ac-4c528aff4685)
 
-First tests are working and I will go on testing 
-and when it is working fine I will try to set AC Output Watts (Powerstream) depending on my live Smartmeter Current Power (Grid) value (or to what else is helping me in my home and local environment):
-
-![image](https://github.com/bogdancs92/ecoflow-powerstream-nodejs/assets/16689453/ad6b813c-3210-4755-89ac-4c528aff4685)
 
 ### **Work in Progress: HA Automations for trying to narrow zero to grid by controlling the Powerstream via the ecoflow-powerstream-nodejs from HA**
-- created some Automations, WebServices, ... for controlling the Powerstream 
-  - One Automation for trying to narrow the supply to grid near zero (currently called every 10 seconds)
-  - working for first tests, optimization for some tactful devices like heating phase of oven maybe needed, ...
-  - several other Automations for e.g. switching Zero Automation on/off, switching to Storage Mode if battery is full, switching to supply mode for the night to deliver AC output and empty the battery, ...
-  - in nodejs (in my case the docker logs) monitor the calls to the ecoflow mqt API for analysing reasons
+* created some Automations, WebServices, ... for controlling the Powerstream 
+    * One Automation for trying to narrow the supply to grid near zero (currently called every 10 seconds)
+    * working for first tests, optimization for some tactful devices like heating phase of oven maybe needed, ...
+    * several other Automations for e.g. switching Zero Automation on/off, switching to Storage Mode if battery is full, switching to supply mode for the night to deliver AC output and empty the battery, ...
+    * in nodejs (in my case the docker logs) monitor the calls to the ecoflow mqt API for analysing reasons
  
 Now need to monitor if it is working fine and Automations are triggered, optimization afterwards (e.g. skip tactful devices) and thought about how to deal with battery in wintertime ;-)
   
