@@ -110,11 +110,20 @@ docker logs --follow <containerID>
 
  
 
-* Webservice (powerstream_command):
-Rest_command.yaml (included in configuration.yaml):
+* Webservices (powerstream_command...):
+rest_command.yaml (included in configuration.yaml):
+e.g.
 ```
 powerstream_command: 
     url: "http://192.168.0.xxx:8888/cmd?my_token=my_secret_for_token&ac_output_watt={{ states('input_number.powerstream_ac_output') }}&power_supply_mode={{ states('input_text.powerstream_power_supply_mode') }}"
+    verify_ssl: false
+
+powerstream_command_set_ac_output: 
+    url: "http://192.168.0.xxx:8888/cmd?my_token=my_secret_for_token&ac_output_watt={{ states('input_number.powerstream_ac_output') }}"
+    verify_ssl: false
+
+powerstream_command_set_prio_mode: 
+    url: "http://192.168.0.xxx:8888/cmd?my_token=my_secret_for_token&power_supply_mode={{ states('input_text.powerstream_power_supply_mode') }}"
     verify_ssl: false
 ```
 
