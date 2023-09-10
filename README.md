@@ -176,3 +176,24 @@ Yesterday: more supply to GRID (selfconsumed 89%) ![image](https://github.com/gi
 
 Today: supply to GRID was minizized (selfconsumed >98%, at 17:00) ![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/9515996c-16b8-4918-aa2f-2dfbd3cfa2a7)  ![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/90f85092-4270-4c25-9bc0-6a7fbd6c66a4)
 
+
+
+### **10092023 0900 current state **
+Working very well ;-)
+
+**But, depends of personell environment** and therefore ajustments to us the current available solar (e.g. I can switch additional consumers on or off directly in Home Assistant by Automations depending on the solar overload (pump water basin, water beds, air conditioner, ...; oven, microwave, dishwasher, coffee maker with higher effort are supported by 600W; )
+Also we have a relatively high power consumption and can control were we want to consume it per HA Automations.
+
+
+I have activated the HA control to try to narrow zero to GRID since three days now and the supply to GRID is minimist.
+It was real good to compare here, because we had the whole last week best weather without any cloud ;-)
+![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/03837767-0442-4497-b32a-39782217cab1)
+
+
+View from Smartphone to Home Assistant and current settings/status:
+
+![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/23c1584d-667f-4e1d-9faa-27bfef4c435d)
+
+
+But from now I will start thinking for the winter time and how to deal with it, for my environment it is now starting with bad solar production :-(
+Also will check for optimizations... and follow what different solutions will maybe come up ... ;-)
