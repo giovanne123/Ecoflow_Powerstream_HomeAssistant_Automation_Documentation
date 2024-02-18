@@ -1,3 +1,11 @@
+***2/2024*** new saison starts and I will go on testing and optimizing the solution.
+
+But at the moment it looks like I change to new solution for this zero grid and also possibility to only forward incoming minimal solar in bad weather situations from PS to grid (without stressing Delta 2 Max in low solar incoming weather situations)
+by using a modified Smartplug so that permanentWatts (EEPROM) is not written so often and Smartplug uses default dynamicWatts instead.
+So far looks promising... will go on investigating when weather gets better ...
+(so two solutions will be possible 😉)
+------------------------------
+
 ### Work in Progress: Ecoflow Powerstream's AC Output controlled from Home Assistant by using the ecoflow-powerstream-nodejs
 
 For documentation reference for myself and maybe useful for others also (on your own risk ;-)…
