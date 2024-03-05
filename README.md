@@ -6,6 +6,7 @@ So far looks promising... will go on investigating when weather gets better...
 (so two solutions will be possible 😉)
 
 ***3/2024*** testing new solution using modified SmartPlug:
+
 UseCases:
 - Zero Grid
 - SolarWatt PS map to AC Output
