@@ -12,13 +12,20 @@ UseCases:
   
 ![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/0f9d0d68-73f0-46d3-a372-a6aba4a3f977)
 
-1) Good Weather condition: Zero Grid, try to reach Zero grid supply
+***1) Good Weather condition***: Zero Grid, try to reach Zero grid supply
    
 (image will follow when next good weather is coming)
 
-2) Bad Weather Condition, forward all SolarIn from Powerstream directly to AC Output (dynamicWatts) and do not stress the D2M by minimal load/unload
+***2) Bad Weather Condition***, forward all SolarIn from Powerstream directly to AC Output (dynamicWatts) and do not stress the D2M by minimal load/unload
 
 ![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/8f175de8-7d40-4bda-ad53-32dbd01f933d)
+
+
+***Example: 1 good day followed by 2 bad weather days:*** with changing of UseCases
+
+(Smartplug is going up to max of 2500W (his overvoltage protection in his app config, but PS Inv Output is only 600W because of the official limitation)
+
+![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/2bc168f0-bd84-4b90-96da-53968166a294)
 
 Keep on testing... ;-)
 
