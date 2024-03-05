@@ -31,6 +31,7 @@ UseCases:
 Keep on testing... ;-)
 
 ------------------------------
+(my old nodejs solution, currently not in use because of Smartplug solution)
 
 ### Work in Progress: Ecoflow Powerstream's AC Output controlled from Home Assistant by using the ecoflow-powerstream-nodejs
 
