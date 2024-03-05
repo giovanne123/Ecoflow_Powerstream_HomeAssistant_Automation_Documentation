@@ -24,7 +24,7 @@ UseCases:
 
 ***Example: 1 good day followed by 2 bad weather days:*** with changing of UseCases
 
-(Smartplug is going up to max of 2500W (his overvoltage protection in his app config, but PS Inv Output is only 600W because of the official limitation)
+(Smartplug is going up to max of 2500W (his overvoltage protection in his app config) in Zero Grid mode (here was multiple usages of washing maschine), but PS Inv Output is only 600W because of the official limitation)
 
 ![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/2bc168f0-bd84-4b90-96da-53968166a294)
 
