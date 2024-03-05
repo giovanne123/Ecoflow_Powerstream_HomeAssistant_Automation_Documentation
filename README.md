@@ -5,6 +5,23 @@ by using a modified Smartplug so that permanentWatts (EEPROM) is not written so 
 So far looks promising... will go on investigating when weather gets better...
 (so two solutions will be possible 😉)
 
+***3/2024*** testing new solution using modified SmartPlug:
+UseCases:
+- Zero Grid
+- SolarWatt PS map to AC Output
+  
+![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/0f9d0d68-73f0-46d3-a372-a6aba4a3f977)
+
+1) Good Weather condition: Zero Grid, try to reach Zero grid supply
+   
+(image will follow when next good weather is coming)
+
+2) Bad Weather Condition, forward all SolarIn from Powerstream directly to AC Output (dynamicWatts) and do not stress the D2M by minimal load/unload
+
+![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/8f175de8-7d40-4bda-ad53-32dbd01f933d)
+
+Keep on testing... ;-)
+
 ------------------------------
 
 ### Work in Progress: Ecoflow Powerstream's AC Output controlled from Home Assistant by using the ecoflow-powerstream-nodejs
