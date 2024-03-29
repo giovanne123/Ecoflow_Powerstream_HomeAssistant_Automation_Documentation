@@ -1,11 +1,12 @@
-***2/2024*** new saison starts and I will go on testing and optimizing the solution.
+***29/3/2024*** modified SmartPlug working fine for the below two Usercases in my personell configuration with a high power usage in my home after sun starts to be available again 😜:
 
-But at the moment it looks like I change to new solution for this zero grid and also possibility to only forward incoming minimal solar in bad weather situations from PS to grid (without stressing Delta 2 Max in low solar incoming weather situations)
-by using a modified Smartplug so that permanentWatts (EEPROM) is not written so often and Smartplug uses default dynamicWatts instead.
-So far looks promising... will go on investigating when weather gets better...
-(so two solutions will be possible 😉)
 
-***3/2024*** testing new solution using modified SmartPlug:
+--- Smartplug picture will follow ---
+
+
+
+***3/2024*** testing new solution 
+using modified SmartPlug:
 
 UseCases:
 - Zero Grid
@@ -30,10 +31,14 @@ UseCases:
 
 Keep on testing... ;-)
 
-***29/3/2024*** modified SmartPlug working fine for the above two Usercases in my personell configuration with a high power usage in my home after sun starts to be available again 😜:
 
 
---- Smartplug picture will follow ---
+***2/2024*** new saison starts and I will go on testing and optimizing the solution.
+
+But at the moment it looks like I change to new solution for this zero grid and also possibility to only forward incoming minimal solar in bad weather situations from PS to grid (without stressing Delta 2 Max in low solar incoming weather situations)
+by using a modified Smartplug so that permanentWatts (EEPROM) is not written so often and Smartplug uses default dynamicWatts instead.
+So far looks promising... will go on investigating when weather gets better...
+(so two solutions will be possible 😉)
 
 
 ------------------------------
