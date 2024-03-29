@@ -30,6 +30,12 @@ UseCases:
 
 Keep on testing... ;-)
 
+***29/3/2024*** modified SmartPlug working fine for the above two Usercases in my personell configuration with a high power usage in my home after sun starts to be available again 😜:
+
+
+--- Smartplug picture will follow ---
+
+
 ------------------------------
 (my old nodejs solution, currently not in use because of Smartplug solution)
 
