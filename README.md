@@ -1,7 +1,11 @@
-***29/3/2024*** modified SmartPlug working fine for the below two Usercases in my personell configuration with a high power usage in my home after sun starts to be available again 😜:
+***03.04.2024*** modified SmartPlug working fine for the below two Usercases in my personell configuration with a high power usage in my home after sun starts to be available again 😜:
 
 
---- Smartplug picture will follow ---
+![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/51c26518-d92d-444a-82b6-3c8eef0e47ec)
+
+(for my second Plug I directly connected needed wires through the "dirtly-opened"-housing - not fine but working ;-) - because after first try I know the place of the needed connection. Also I have to inactivate/destroy the original bl0942 in place otherwise it disturb the send data ("dirty" interrupted/destroyed bl0942's VDD Pin through the opened housing).
+! Not for imitation, at your own risk due to 230V as long as the required circuit board has not been separated and, for example, only works with 3.3/5V, possible defects in the device
+-> only for my own documentation)
 
 (starting point: https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/issues/2)
 
