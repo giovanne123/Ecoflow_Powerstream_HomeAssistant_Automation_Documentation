@@ -1,26 +1,29 @@
-***03.04.2024*** modified SmartPlug working fine for the below two Usercases in my personell configuration for the whole march:
+### Work in Progress: Ecoflow Powerstream's AC Output controlled from Home Assistant by using a modified Smartplug
+<sup>(for old nodejs solution and my initial intention see [link](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/tree/main#work-in-progress-ecoflow-powerstreams-ac-output-controlled-from-home-assistant-by-using-the-ecoflow-powerstream-nodejs))</sup>
+
+#### ***03.04.2024*** modified SmartPlug working fine for the below two Usercases in my personell configuration for the whole march:
 
 -> only for my own documentation
 
-![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/51c26518-d92d-444a-82b6-3c8eef0e47ec)
+&nbsp;&nbsp;&nbsp; ![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/51c26518-d92d-444a-82b6-3c8eef0e47ec)
 
-For my second Plug I directly connected needed wires through the "dirtly-opened"-housing - not fine but working ;-) - because after first try I know the place of the needed connection. Also I have to inactivate/destroy the original bl0942 in place otherwise it disturb the send data ("dirty" interrupted/destroyed bl0942's VDD Pin through the opened housing).
+<sub>For my second Plug I directly connected needed wires through the "dirtly-opened"-housing - not fine but working ;-) - because after first try I know the place of the needed connection. Also I have to inactivate/destroy the original bl0942 in place otherwise it disturb the send data ("dirty" interrupted/destroyed bl0942's VDD Pin through the opened housing).</sub>
 
-! Not for imitation, at your own risk due to 230V as long as the required circuit board has not been separated and, for example, only works with 3.3/5V, possible defects in the device
+<sub>! Not for imitation, at your own risk due to 230V as long as the required circuit board has not been separated and, for example, only works with 3.3/5V, possible defects in the device</sub>
 
 -> only for my own documentation
 
-(starting point: https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/issues/2)
+<sub>(starting point: https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/issues/2)</sub>
 
 
-***3/2024*** testing new solution 
+#### ***3/2024*** testing new solution 
 using modified SmartPlug:
 
 UseCases:
 - Zero Grid
 - SolarWatt PS map to AC Output
   
-![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/0f9d0d68-73f0-46d3-a372-a6aba4a3f977)
+&nbsp;&nbsp;&nbsp; ![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/0f9d0d68-73f0-46d3-a372-a6aba4a3f977)
 
 ***1) Good Weather condition***: Zero Grid, try to reach Zero grid supply
    
@@ -28,20 +31,21 @@ UseCases:
 
 ***2) Bad Weather Condition***, forward all SolarIn from Powerstream directly to AC Output (dynamicWatts) and do not stress the D2M by minimal load/unload
 
-![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/8f175de8-7d40-4bda-ad53-32dbd01f933d)
+&nbsp;&nbsp;&nbsp; ![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/8f175de8-7d40-4bda-ad53-32dbd01f933d)
 
 
 ***Example: 1 good day followed by 2 bad weather days:*** with changing of UseCases
 
 (Smartplug is going up to max of 2500W (his overvoltage protection in his app config) in Zero Grid mode (here was multiple usages of washing maschine), but PS Inv Output is only 600W because of the official limitation)
 
-![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/2bc168f0-bd84-4b90-96da-53968166a294)
-
-Keep on testing... ;-)
+&nbsp;&nbsp;&nbsp; ![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/2bc168f0-bd84-4b90-96da-53968166a294)
 
 
+<sub>Keep on testing... ;-)</sub>
 
-***2/2024*** new saison starts and I will go on testing and optimizing the solution.
+
+
+#### ***2/2024*** new saison starts and I will go on testing and optimizing the solution.
 
 But at the moment it looks like I change to new solution for this zero grid and also possibility to only forward incoming minimal solar in bad weather situations from PS to grid (without stressing Delta 2 Max in low solar incoming weather situations)
 by using a modified Smartplug so that permanentWatts (EEPROM) is not written so often and Smartplug uses default dynamicWatts instead.
@@ -49,6 +53,7 @@ So far looks promising... will go on investigating when weather gets better...
 (so two solutions will be possible 😉)
 
 
+------------------------------
 ------------------------------
 (my old nodejs solution, currently not in use because of Smartplug solution)
 
