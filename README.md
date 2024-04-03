@@ -1,5 +1,5 @@
-***03.04.2024*** modified SmartPlug working fine for the below two Usercases in my personell configuration with a high power usage in my home after sun starts to be available again 😜:
-
+***03.04.2024*** modified SmartPlug working fine for the below two Usercases in my personell configuration for the whole march:
+-> only for my own documentation
 
 ![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/51c26518-d92d-444a-82b6-3c8eef0e47ec)
 
