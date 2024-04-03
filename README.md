@@ -2,7 +2,7 @@
 
 
 --- Smartplug picture will follow ---
-
+(starting point: https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/issues/2)
 
 
 ***3/2024*** testing new solution 
