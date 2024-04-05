@@ -15,6 +15,9 @@
 
 <sub>(starting point: https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/issues/2)</sub>
 
+<sub>Example only for possibilities: e.g. mapping:</sub>
+&nbsp;&nbsp;![image](https://github.com/giovanne123/Ecoflow_Powerstream_HomeAssistant_Automation_Documentation/assets/16689453/2706da54-50e9-4690-9980-911214e2237d)
+
 
 #### ***3/2024*** testing new solution 
 using modified SmartPlug:
